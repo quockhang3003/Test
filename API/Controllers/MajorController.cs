@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Service;
 
 namespace API.Controllers
@@ -9,15 +8,24 @@ namespace API.Controllers
     public class MajorController : ControllerBase
     {
         private readonly MajorService _service;
+        
         public MajorController(MajorService service)
         {
             _service = service;
         }
+        
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var major = await _service.GetAllAsync();
-            return major == null ? NotFound() : Ok(major);
+            try
+            {
+                var majors = await _service.GetAllAsync();
+                return Ok(majors);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

@@ -31,6 +31,7 @@ builder.Services.AddScoped<IMajorRepository, MajorRepository>();
 builder.Services.AddScoped<IDegreeRepository, DegreeRepository>();
 builder.Services.AddScoped<IUniversityRepository, UniversityRepository>();
 builder.Services.AddScoped<IEducationRepository, EducationRepository>();
+
 builder.Services.AddScoped<CityService>();
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<PreferenceService>();
@@ -41,6 +42,7 @@ builder.Services.AddScoped<MajorService>();
 builder.Services.AddScoped<DegreeService>();
 builder.Services.AddScoped<UniversityService>();
 builder.Services.AddScoped<EducationService>();
+
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddAuthorization();

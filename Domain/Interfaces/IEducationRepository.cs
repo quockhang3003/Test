@@ -10,9 +10,10 @@ namespace Domain.Interfaces
     public interface IEducationRepository
     {
         Task<IEnumerable<Education>> GetAllAsync();
+        Task<IEnumerable<Education>> GetByUserIdAsync(int userId);
+        Task<Education?> GetByIdAsync(int id);
         Task AddAsync(Education education);
-        Task UpdateAsync(int id);
+        Task UpdateAsync(Education education);
         Task DeleteAsync(int id);
-
     }
 }

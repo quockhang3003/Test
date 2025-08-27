@@ -2,7 +2,14 @@
 @using System.ComponentModel.DataAnnotations
 @using Domain.DTO
 @using Domain.Entities
+@using Microsoft.AspNetCore.Components.Authorization
+@using Service
 @inject IHttpClientFactory ClientFactory
+@inject IJSRuntime JSRuntime
+@inject SessionService SessionService
+@inject NavigationManager Navigation
+@inject AuthenticationStateProvider AuthProvider
+
 <div class="kpmg-header">
     <div class="container">
         <h1 class="kpmg-title">KPMG ONLINE APPLICATION</h1>
@@ -10,260 +17,543 @@
 </div>
 
 <div class="container">
-    @if (showSuccessMessage)
+    @if (!isAuthenticated)
     {
-        <div class="success-message">
-            <i class="fas fa-check-circle me-2"></i>
-            @successMessage
+        <div class="alert alert-warning">
+            <h4>Authentication Required</h4>
+            <p>You need to complete Step 1 (Registration) before accessing this step.</p>
+            <a href="/register" class="btn btn-primary">Go to Step 1</a>
         </div>
     }
-
-    <!-- Step Information -->
-    <div class="step-info">
-        <strong>Step 2 of 4</strong> Required fields are indicated by <span class="required-asterisk">*</span> (Please complete this form in English)
-    </div>
-
-    <EditForm Model="@currentEducation" OnValidSubmit="@AddUniversity">
-        <DataAnnotationsValidator />
-        <ValidationSummary/>
-        <div class="form-container">
-            <div class="education-section">
-                EDUCATION <span class="required-asterisk">*</span>
-            </div>
-
-            <div class="form-content form-control-sm ms-1 mt-3 mb-3 col-7 nav-bg">
-                <div class="row mb-2">
-                    <div class="col-md-4 text-end">
-                        <label class="form-label">University</label>
-                    </div>
-                    <div class="col-md-8">
-                        <InputSelect class="form-select" @bind-Value="currentEducation.University">
-                            <option value="">(PP) Acleda University</option>
-                            <option value="Harvard University">Harvard University</option>
-                            <option value="Stanford University">Stanford University</option>
-                            <option value="MIT">MIT</option>
-                            <option value="Oxford University">Oxford University</option>
-                            <option value="Cambridge University">Cambridge University</option>
-                        </InputSelect>
-                        <ValidationMessage For="@(() => currentEducation.University)" class="validation-message" />
-                    </div>
-                </div>
-
-                <div class="row mb-2">
-                    <div class="col-md-4 text-end">
-                        <label class="form-label">Major</label>
-                    </div>
-                    <div class="col-md-8">
-                        <InputSelect class="form-select" @bind-Value="currentEducation.Major">
-                            <option value="">-- Select Major --</option>
-                            <option value="Accounting">Accounting</option>
-                            <option value="Finance">Finance</option>
-                            <option value="Business Administration">Business Administration</option>
-                            <option value="Economics">Economics</option>
-                            <option value="Computer Science">Computer Science</option>
-                            <option value="Engineering">Engineering</option>
-                        </InputSelect>
-                        <ValidationMessage For="@(() => currentEducation.Major)" class="validation-message" />
-                    </div>
-                </div>
-
-                <div class="row mb-2">
-                    <div class="col-md-4 text-end">
-                        <label class="form-label">Degree</label>
-                    </div>
-                    <div class="col-md-8">
-                        <InputSelect TValue="int?"
-                                     Value="registerModel.FirstPreference"
-                                     ValueChanged="@((int? val) => registerModel.FirstPreference = val)"
-                                     ValueExpression="@(() => registerModel.FirstPreference)"
-                                     class="form-select form-select-sm">
-                            <option value="">N/A</option>
-                            @foreach (var pre in preference)
-                            {
-                                <option value="@pre.Id">@pre.PreferenceName</option>
-                            }
-                        </InputSelect>
-                        <ValidationMessage For="@(() => registerModel.FirstPreference)" />
-                    </div>
-                </div>
-
-                <div class="row mb-2">
-                    <div class="col-md-4 text-end">
-                        <label class="form-label">Location</label>
-                    </div>
-                    <div class="col-md-8">
-                        <InputText class="form-control" @bind-Value="currentEducation.Location" placeholder="Enter university location" />
-                        <ValidationMessage For="@(() => currentEducation.Location)" class="validation-message" />
-                    </div>
-                </div>
-
-                <div class="row mb-2">
-                    <div class="col-md-4 text-end">
-                        <label class="form-label ">Grade Point Average</label>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="gpa-group">
-                            <InputNumber class="form-control gpa-input" @bind-Value="currentEducation.GPA" step="0.01" placeholder="3.5" />
-                            <span class="out-of-label text-end">Out of</span>
-                            <InputNumber class="form-control out-of-input" @bind-Value="currentEducation.OutOf" step="0.01" placeholder="4.0" />
-                        </div>
-                        <ValidationMessage For="@(() => currentEducation.GPA)" class="validation-message" />
-                        <ValidationMessage For="@(() => currentEducation.OutOf)" class="validation-message" />
-                    </div>
-                </div>
-
-                <div class="row mb-2">
-                    <div class="col-md-4 text-end">
-                        <label class="form-label">Graduation Year</label>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-6">
-                                <InputSelect class="form-select" @bind-Value="currentEducation.GraduationMonth">
-                                    <option value="">Month</option>
-                                    <option value="January">January</option>
-                                    <option value="February">February</option>
-                                    <option value="March">March</option>
-                                    <option value="April">April</option>
-                                    <option value="May">May</option>
-                                    <option value="June">June</option>
-                                    <option value="July">July</option>
-                                    <option value="August">August</option>
-                                    <option value="September">September</option>
-                                    <option value="October">October</option>
-                                    <option value="November">November</option>
-                                    <option value="December">December</option>
-                                </InputSelect>
-                                <ValidationMessage For="@(() => currentEducation.GraduationMonth)" class="validation-message" />
-                            </div>
-                            <div class="col-6">
-                                <InputSelect class="form-select" @bind-Value="currentEducation.GraduationYear">
-                                    <option value="0">Year</option>
-                                    @for (int year = DateTime.Now.Year + 5; year >= DateTime.Now.Year - 20; year--)
-                                    {
-                                        <option value="@year">@year</option>
-                                    }
-                                </InputSelect>
-                                <ValidationMessage For="@(() => currentEducation.GraduationYear)" class="validation-message" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-4"></div>
-                    <div class="col-md-8">
-                        <button type="submit" class="btn add-btn">
-                            <i class="fas fa-plus me-2"></i>Add
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </EditForm>
-
-
-    <h6>Universities</h6>
-    @if (educations.Any())
+    else
     {
-        <div class="universities-table">
-            <table class="table">
-                <thead class="text-dark fw-bold">
-                    <tr>
-                        <th>Date of Graduation</th>
-                        <th>Name</th>
-                        <th>Location</th>
-                        <th>Major</th>
-                        <th>Degree</th>
-                        <th>GPA</th>
-                        <th>Delete</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @for (int i = 0; i < educations.Count; i++)
-                    {
-                        var index = i; // Capture for closure
-                        <tr>
-                            <td>@educations[index].FormattedGraduationDate</td>
-                            <td>@educations[index].University</td>
-                            <td>@educations[index].Location</td>
-                            <td>@educations[index].Major</td>
-                            <td>@educations[index].Degree</td>
-                            <td>@educations[index].GPA</td>
-                            <td>
-                                <button type="button" class="delete-link" @onclick="() => DeleteUniversity(index)"
-                                        @onclick:preventDefault="true">
-                                    Delete
-                                </button>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
+        @if (showSuccessMessage)
+        {
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <i class="fas fa-check-circle me-2"></i>
+                @successMessage
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+
+        @if (showErrorMessage)
+        {
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <i class="fas fa-exclamation-circle me-2"></i>
+                @errorMessage
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+
+        <!-- Step Information -->
+        <div class="step-info mb-4">
+            <strong>Step 2 of 4</strong> - Education Background for <strong>@currentUserEmail</strong><br/>
+            Required fields are indicated by <span class="required-asterisk">*</span> (Please complete this form in English)
+        </div>
+
+        <EditForm Model="@educationModel" OnValidSubmit="@AddEducation">
+            <DataAnnotationsValidator />
+            <div class="form-container">
+                <div class="education-section">
+                    EDUCATION <span class="required-asterisk">*</span>
+                </div>
+
+                <div class="form-content form-control-sm ms-1 mt-3 mb-3 col-7 nav-bg">
+                    <div class="row mb-2">
+                        <div class="col-md-4 text-end">
+                            <label class="form-label">University <span class="required-asterisk">*</span></label>
+                        </div>
+                        <div class="col-md-8">
+                            <InputSelect TValue="int?"
+                                         Value="educationModel.UniversityID"
+                                         ValueChanged="@((int? val) => educationModel.UniversityID = val)"
+                                         ValueExpression="@(() => educationModel.UniversityID)"
+                                         class="form-select">
+                                <option value="">-- Select University --</option>
+                                @foreach (var university in universities)
+                                {
+                                    <option value="@university.Id">@university.UniversityName</option>
+                                }
+                            </InputSelect>
+                            <ValidationMessage For="@(() => educationModel.UniversityID)" class="text-danger" />
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <div class="col-md-4 text-end">
+                            <label class="form-label">Major <span class="required-asterisk">*</span></label>
+                        </div>
+                        <div class="col-md-8">
+                            <InputSelect TValue="int?"
+                                         Value="educationModel.MajorID"
+                                         ValueChanged="@((int? val) => educationModel.MajorID = val)"
+                                         ValueExpression="@(() => educationModel.MajorID)"
+                                         class="form-select">
+                                <option value="">-- Select Major --</option>
+                                @foreach (var major in majors)
+                                {
+                                    <option value="@major.Id">@major.MajorName</option>
+                                }
+                            </InputSelect>
+                            <ValidationMessage For="@(() => educationModel.MajorID)" class="text-danger" />
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <div class="col-md-4 text-end">
+                            <label class="form-label">Degree <span class="required-asterisk">*</span></label>
+                        </div>
+                        <div class="col-md-8">
+                            <InputSelect TValue="int?"
+                                         Value="educationModel.DegreeID"
+                                         ValueChanged="@((int? val) => educationModel.DegreeID = val)"
+                                         ValueExpression="@(() => educationModel.DegreeID)"
+                                         class="form-select">
+                                <option value="">-- Select Degree --</option>
+                                @foreach (var degree in degrees)
+                                {
+                                    <option value="@degree.Id">@degree.DegreeName</option>
+                                }
+                            </InputSelect>
+                            <ValidationMessage For="@(() => educationModel.DegreeID)" class="text-danger" />
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <div class="col-md-4 text-end">
+                            <label class="form-label">Location <span class="required-asterisk">*</span></label>
+                        </div>
+                        <div class="col-md-8">
+                            <InputText class="form-control" @bind-Value="educationModel.Location" placeholder="Enter university location" />
+                            <ValidationMessage For="@(() => educationModel.Location)" class="text-danger" />
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <div class="col-md-4 text-end">
+                            <label class="form-label">Grade Point Average <span class="required-asterisk">*</span></label>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="gpa-group d-flex align-items-center gap-2">
+                                <InputNumber class="form-control gpa-input" style="width: 100px;" @bind-Value="educationModel.GPA" step="0.01" placeholder="3.5" />
+                                <span class="out-of-label">Out of</span>
+                                <InputNumber class="form-control out-of-input" style="width: 100px;" @bind-Value="educationModel.OutOf" step="0.01" placeholder="4.0" />
+                            </div>
+                            <ValidationMessage For="@(() => educationModel.GPA)" class="text-danger" />
+                            <ValidationMessage For="@(() => educationModel.OutOf)" class="text-danger" />
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <div class="col-md-4 text-end">
+                            <label class="form-label">Graduation Date <span class="required-asterisk">*</span></label>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <InputSelect class="form-select" @bind-Value="educationModel.GraduationMonth">
+                                        <option value="">Month</option>
+                                        <option value="January">January</option>
+                                        <option value="February">February</option>
+                                        <option value="March">March</option>
+                                        <option value="April">April</option>
+                                        <option value="May">May</option>
+                                        <option value="June">June</option>
+                                        <option value="July">July</option>
+                                        <option value="August">August</option>
+                                        <option value="September">September</option>
+                                        <option value="October">October</option>
+                                        <option value="November">November</option>
+                                        <option value="December">December</option>
+                                    </InputSelect>
+                                    <ValidationMessage For="@(() => educationModel.GraduationMonth)" class="text-danger" />
+                                </div>
+                                <div class="col-6">
+                                    <InputSelect TValue="int"
+                                                 Value="educationModel.GraduationYear"
+                                                 ValueChanged="@((int val) => educationModel.GraduationYear = val)"
+                                                 ValueExpression="@(() => educationModel.GraduationYear)"
+                                                 class="form-select">
+                                        <option value="0">Year</option>
+                                        @for (int year = DateTime.Now.Year + 5; year >= DateTime.Now.Year - 20; year--)
+                                        {
+                                            <option value="@year">@year</option>
+                                        }
+                                    </InputSelect>
+                                    <ValidationMessage For="@(() => educationModel.GraduationYear)" class="text-danger" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-8">
+                            <button type="submit" class="btn btn-primary" disabled="@isSubmitting">
+                                @if (isSubmitting)
+                                {
+                                    <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                                    <span>Adding...</span>
+                                }
+                                else
+                                {
+                                    <i class="fas fa-plus me-2"></i>
+                                    <span>Add</span>
+                                }
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ValidationSummary class="text-danger" />
+        </EditForm>
+
+        <div class="mt-4">
+            <h6>Your Education Background</h6>
+            @if (isLoadingEducations)
+            {
+                <div class="text-center p-3">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p>Loading education records...</p>
+                </div>
+            }
+            else if (educations.Any())
+            {
+                <div class="universities-table">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Date of Graduation</th>
+                                    <th>University</th>
+                                    <th>Location</th>
+                                    <th>Major</th>
+                                    <th>Degree</th>
+                                    <th>GPA</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var education in educations)
+                                {
+                                    <tr>
+                                        <td>@education.FormattedGraduationDate</td>
+                                        <td>@GetUniversityName(education.UniversityID)</td>
+                                        <td>@education.Location</td>
+                                        <td>@GetMajorName(education.MajorID)</td>
+                                        <td>@GetDegreeName(education.DegreeID)</td>
+                                        <td>@education.GPA.ToString("F2")/@education.OutOf.ToString("F2")</td>
+                                        <td>
+                                            <button type="button" class="btn btn-sm btn-outline-danger" 
+                                                    @onclick="() => DeleteEducation(education.Id)"
+                                                    disabled="@isDeletingEducation">
+                                                @if (isDeletingEducation && deletingEducationId == education.Id)
+                                                {
+                                                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                                }
+                                                else
+                                                {
+                                                    <i class="fas fa-trash"></i>
+                                                }
+                                                Delete
+                                            </button>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle me-2"></i>
+                    No education records found. Please add your education background to continue.
+                </div>
+            }
+        </div>
+
+        <div class="mt-4 d-flex justify-content-between">
+            <a href="/register" class="btn btn-secondary">
+                <i class="fas fa-arrow-left me-2"></i>Previous Step
+            </a>
+            <button class="btn btn-success" @onclick="NextStep" disabled="@(!educations.Any())">
+                Next Step<i class="fas fa-arrow-right ms-2"></i>
+            </button>
         </div>
     }
 </div>
 
 @code {
-    private EducationDTO educationModel { get; set; } = new EducationDTO();
+    private EducationDTO educationModel = new EducationDTO();
     private List<Education> educations = new List<Education>();
+    private List<UniversityDTO> universities = new List<UniversityDTO>();
+    private List<MajorDTO> majors = new List<MajorDTO>();
+    private List<DegreeDTO> degrees = new List<DegreeDTO>();
+    
     private bool showSuccessMessage = false;
+    private bool showErrorMessage = false;
     private string successMessage = "";
+    private string errorMessage = "";
+    private bool isSubmitting = false;
+    private bool isLoadingEducations = true;
+    private bool isDeletingEducation = false;
+    private int deletingEducationId = 0;
+    
+    private bool isAuthenticated = false;
+    private string currentUserEmail = "";
+    private int currentUserId = 0;
+    
     private HttpClient Http => ClientFactory.CreateClient("LocalAPI");
-    private List<UniversityDTO> universities = new();
-    private List<MajorDTO> major = new();
-    private List<DegreeDTO> degree = new();
-    protected async override void OnInitialized()
+
+    protected override async Task OnInitializedAsync()
     {
-        universities = await Http.GetFromJsonAsync<List<UniversityDTO>>("api/University") ?? new();
-        major = await Http.GetFromJsonAsync<List<MajorDTO>>("api/Major") ?? new();
-        degree = await Http.GetFromJsonAsync<List<DegreeDTO>>("api/Degree") ?? new();
-        
+        await CheckAuthenticationAndLoadData();
     }
 
-    // private async Task AddUniversity()
-    // {
-    //     var newEducation = new Education
-    //     {
-    //         University = currentEducation.University,
-    //         Major = currentEducation.Major,
-    //         Degree = currentEducation.Degree,
-    //         Location = currentEducation.Location,
-    //         GPA = currentEducation.GPA,
-    //         OutOf = currentEducation.OutOf,
-    //         GraduationMonth = currentEducation.GraduationMonth,
-    //         GraduationYear = currentEducation.GraduationYear
-    //     };
+    private async Task CheckAuthenticationAndLoadData()
+    {
+        try
+        {
+            // Check authentication state
+            var authState = await AuthProvider.GetAuthenticationStateAsync();
+            var user = authState.User;
+            
+            isAuthenticated = user.Identity?.IsAuthenticated == true && user.IsInRole("User");
+            
+            if (isAuthenticated)
+            {
+                currentUserEmail = user.Identity.Name ?? "";
+                
+                // Get session info to get user ID
+                var sessionInfo = await SessionService.GetSessionInfoAsync();
+                if (sessionInfo.IsUser && sessionInfo.UserId.HasValue)
+                {
+                    currentUserId = sessionInfo.UserId.Value;
+                    await LoadInitialData();
+                }
+                else
+                {
+                    errorMessage = "Unable to retrieve user session. Please login again.";
+                    showErrorMessage = true;
+                    isAuthenticated = false;
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Authentication error: {ex.Message}";
+            showErrorMessage = true;
+            isAuthenticated = false;
+        }
+        finally
+        {
+            isLoadingEducations = false;
+            StateHasChanged();
+        }
+    }
 
-    //     educations.Add(newEducation);
+    private async Task LoadInitialData()
+    {
+        try
+        {
+            // Load dropdown data
+            var universityTask = Http.GetFromJsonAsync<List<UniversityDTO>>("api/University");
+            var majorTask = Http.GetFromJsonAsync<List<MajorDTO>>("api/Major");  
+            var degreeTask = Http.GetFromJsonAsync<List<DegreeDTO>>("api/Degree");
 
-    //     currentEducation = new Education();
-    //     successMessage = "Add university successfully.";
+            await Task.WhenAll(universityTask, majorTask, degreeTask);
 
+            universities = universityTask.Result ?? new List<UniversityDTO>();
+            majors = majorTask.Result ?? new List<MajorDTO>();
+            degrees = degreeTask.Result ?? new List<DegreeDTO>();
 
-    //     showSuccessMessage = true;
-    //     StateHasChanged();
+            // Load user's education records
+            await LoadEducations();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Failed to load data: {ex.Message}";
+            showErrorMessage = true;
+        }
+    }
 
-    //     await Task.Delay(3000);
-    //     showSuccessMessage = false;
-    //     StateHasChanged();
-    // }
+    private async Task LoadEducations()
+    {
+        try
+        {
+            if (currentUserId > 0)
+            {
+                educations = await Http.GetFromJsonAsync<List<Education>>($"api/Education/user/{currentUserId}") ?? new List<Education>();
+            }
+        }
+        catch (HttpRequestException ex)
+        {
+            if (ex.Message.Contains("401"))
+            {
+                errorMessage = "Session expired. Please login again.";
+                showErrorMessage = true;
+                await Task.Delay(2000);
+                Navigation.NavigateTo("/login", forceLoad: true);
+            }
+            else
+            {
+                errorMessage = $"Failed to load education records: {ex.Message}";
+                showErrorMessage = true;
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error loading education: {ex.Message}";
+            showErrorMessage = true;
+        }
+    }
 
-    // private void DeleteUniversity(int index)
-    // {
-    //     if (index >= 0 && index < educations.Count)
-    //     {
-    //         educations.RemoveAt(index);
-    //         successMessage = "University deleted successfully.";
-    //         showSuccessMessage = true;
-    //         StateHasChanged();
+    private async Task AddEducation()
+    {
+        if (isSubmitting || !isAuthenticated) return;
 
-    //         Task.Delay(3000).ContinueWith(_ =>
-    //         {
-    //             showSuccessMessage = false;
-    //             InvokeAsync(StateHasChanged);
-    //         });
-    //     }
-    // }
+        isSubmitting = true;
+        try
+        {
+            var response = await Http.PostAsJsonAsync("api/Education", educationModel);
+            
+            if (response.IsSuccessStatusCode)
+            {
+                successMessage = "Education record added successfully!";
+                showSuccessMessage = true;
+                showErrorMessage = false;
+                
+                // Reset form
+                educationModel = new EducationDTO();
+                
+                // Reload education list
+                await LoadEducations();
+                
+                // Hide success message after 3 seconds
+                _ = Task.Delay(3000).ContinueWith(_ =>
+                {
+                    showSuccessMessage = false;
+                    InvokeAsync(StateHasChanged);
+                });
+            }
+            else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+            {
+                errorMessage = "Session expired. Please login again.";
+                showErrorMessage = true;
+                await Task.Delay(2000);
+                Navigation.NavigateTo("/login", forceLoad: true);
+            }
+            else
+            {
+                var errorContent = await response.Content.ReadAsStringAsync();
+                errorMessage = $"Failed to add education: {errorContent}";
+                showErrorMessage = true;
+                showSuccessMessage = false;
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error adding education: {ex.Message}";
+            showErrorMessage = true;
+            showSuccessMessage = false;
+        }
+        finally
+        {
+            isSubmitting = false;
+            StateHasChanged();
+        }
+    }
 
+    private async Task DeleteEducation(int educationId)
+    {
+        if (isDeletingEducation || !isAuthenticated) return;
+        
+        bool confirmed = await JSRuntime.InvokeAsync<bool>("confirm", 
+            "Are you sure you want to delete this education record?");
+            
+        if (!confirmed) return;
+
+        isDeletingEducation = true;
+        deletingEducationId = educationId;
+
+        try
+        {
+            var response = await Http.DeleteAsync($"api/Education/{educationId}");
+            
+            if (response.IsSuccessStatusCode)
+            {
+                successMessage = "Education record deleted successfully!";
+                showSuccessMessage = true;
+                showErrorMessage = false;
+                
+                // Remove from local list
+                educations.RemoveAll(e => e.Id == educationId);
+                
+                // Hide success message after 3 seconds
+                _ = Task.Delay(3000).ContinueWith(_ =>
+                {
+                    showSuccessMessage = false;
+                    InvokeAsync(StateHasChanged);
+                });
+            }
+            else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+            {
+                errorMessage = "Session expired. Please login again.";
+                showErrorMessage = true;
+                await Task.Delay(2000);
+                Navigation.NavigateTo("/login", forceLoad: true);
+            }
+            else
+            {
+                var errorContent = await response.Content.ReadAsStringAsync();
+                errorMessage = $"Failed to delete education: {errorContent}";
+                showErrorMessage = true;
+                showSuccessMessage = false;
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error deleting education: {ex.Message}";
+            showErrorMessage = true;
+            showSuccessMessage = false;
+        }
+        finally
+        {
+            isDeletingEducation = false;
+            deletingEducationId = 0;
+            StateHasChanged();
+        }
+    }
+
+    private async Task NextStep()
+    {
+        if (educations.Any())
+        {
+            Navigation.NavigateTo("/step3");
+        }
+        else
+        {
+            errorMessage = "Please add at least one education record before proceeding to the next step.";
+            showErrorMessage = true;
+        }
+    }
+
+    private string GetUniversityName(int universityId)
+    {
+        return universities.FirstOrDefault(u => u.Id == universityId)?.UniversityName ?? "Unknown";
+    }
+
+    private string GetMajorName(int majorId)
+    {
+        return majors.FirstOrDefault(m => m.Id == majorId)?.MajorName ?? "Unknown";
+    }
+
+    private string GetDegreeName(int degreeId)
+    {
+        return degrees.FirstOrDefault(d => d.Id == degreeId)?.DegreeName ?? "Unknown";
+    }
 }

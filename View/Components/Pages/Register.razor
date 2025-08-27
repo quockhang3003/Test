@@ -7,6 +7,7 @@
 @using Domain.Entities
 @using Microsoft.AspNetCore.Components
 @using Service
+@inject NavigationManager Navigation
 @inject IHttpClientFactory ClientFactory
 @inject IJSRuntime jSRuntime
 @inject CookieService CookieService
@@ -242,13 +243,23 @@ else
                             </div>
                         </div>
                         <div class="text-center col-sm-7 px-4 py-4">
-                            <button type="submit" class="btn btn-primary">
-                                Save
+                            <button type="submit" class="btn btn-primary" disabled="@isSaving">
+                                @if (isSaving)
+                                {
+                                <span class="spinner-border spinner-border-sm me-2" role="status"></span>
+                                <span>Saving...</span>
+                                }
+                                else
+                                {
+                                <span>Next</span>
+                                }
                             </button>
                         </div>
                         @if (!string.IsNullOrEmpty(submitMessage))
                         {
-                            <div class="alert alert-info">@submitMessage</div>
+                        <div class="alert @(submitMessage.Contains("thành công") ? "alert-success" : "alert-danger")">
+                            @submitMessage
+                        </div>
                         }
                     </div>
                 </div>
@@ -377,17 +388,21 @@ else
             
              var response = await Http.PostAsJsonAsync("api/User/register", apiModel);
 
-            if (response.IsSuccessStatusCode)
-            {
-                submitMessage = "Lưu thành công!";
-                Console.WriteLine("Registration successful!");
-            }
-            else
-            {
-                var errorMessage = await response.Content.ReadAsStringAsync();
-                submitMessage = $"Lỗi: {errorMessage}";
-                Console.WriteLine($"API Error: {errorMessage}");
-            }
+             if (response.IsSuccessStatusCode)
+             {
+                 submitMessage = "Lưu thành công! Đang chuyển đến bước tiếp theo...";
+                 StateHasChanged();
+                
+                 await Task.Delay(1500);
+                
+                 Navigation.NavigateTo("/register/step2", forceLoad: false);
+             }
+             else
+             {
+                 var errorMessage = await response.Content.ReadAsStringAsync();
+                 submitMessage = $"Lỗi: {errorMessage}";
+                 Console.WriteLine($"API Error: {errorMessage}");
+             }
         }
         catch (Exception ex)
         {

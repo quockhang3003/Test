@@ -10,8 +10,13 @@ namespace Domain.DTO
     public class EducationDTO
     {
         public int Id { get; set; }
+        
+        // Không cần validation vì sẽ được set từ session
+        public int? UserID { get; set; }
+        
         [Required(ErrorMessage = "Please select a university")]
         public int? UniversityID { get; set; }
+        
         [Required(ErrorMessage = "Please select a major")]
         public int? MajorID { get; set; }
 

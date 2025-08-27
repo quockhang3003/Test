@@ -10,8 +10,14 @@ namespace Domain.Entities
     public class Education
     {
         public int Id { get; set; }
+        
+        // Thêm UserID để liên kết với User
+        [Required(ErrorMessage = "User ID is required")]
+        public int UserID { get; set; }
+        
         [Required(ErrorMessage = "Please select a university")]
         public int UniversityID { get; set; }
+        
         [Required(ErrorMessage = "Please select a major")]
         public int MajorID { get; set; }
 
