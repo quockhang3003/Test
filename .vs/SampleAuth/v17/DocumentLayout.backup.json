@@ -1,0 +1,1020 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Working\\SampleAuth\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F78718DD-D411-4098-88F6-FBEBF60FA531}|API\\API.csproj|c:\\working\\sampleauth\\api\\controllers\\educationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F78718DD-D411-4098-88F6-FBEBF60FA531}|API\\API.csproj|solutionrelative:api\\controllers\\educationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F78718DD-D411-4098-88F6-FBEBF60FA531}|API\\API.csproj|c:\\working\\sampleauth\\api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F78718DD-D411-4098-88F6-FBEBF60FA531}|API\\API.csproj|solutionrelative:api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F78718DD-D411-4098-88F6-FBEBF60FA531}|API\\API.csproj|c:\\working\\sampleauth\\api\\controllers\\locationofficecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F78718DD-D411-4098-88F6-FBEBF60FA531}|API\\API.csproj|solutionrelative:api\\controllers\\locationofficecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F22C84E9-CAB6-4F9A-BF39-BC8DC5D16CF4}|Service\\Service.csproj|c:\\working\\sampleauth\\service\\educationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F22C84E9-CAB6-4F9A-BF39-BC8DC5D16CF4}|Service\\Service.csproj|solutionrelative:service\\educationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F22C84E9-CAB6-4F9A-BF39-BC8DC5D16CF4}|Service\\Service.csproj|c:\\working\\sampleauth\\service\\degreeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F22C84E9-CAB6-4F9A-BF39-BC8DC5D16CF4}|Service\\Service.csproj|solutionrelative:service\\degreeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5558CB8F-9B39-47E6-80ED-714DA094627E}|Domain\\Domain.csproj|c:\\working\\sampleauth\\domain\\dto\\educationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5558CB8F-9B39-47E6-80ED-714DA094627E}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\educationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5558CB8F-9B39-47E6-80ED-714DA094627E}|Domain\\Domain.csproj|c:\\working\\sampleauth\\domain\\dto\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5558CB8F-9B39-47E6-80ED-714DA094627E}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5558CB8F-9B39-47E6-80ED-714DA094627E}|Domain\\Domain.csproj|c:\\working\\sampleauth\\domain\\entities\\education.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5558CB8F-9B39-47E6-80ED-714DA094627E}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\education.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5558CB8F-9B39-47E6-80ED-714DA094627E}|Domain\\Domain.csproj|c:\\working\\sampleauth\\domain\\dto\\universitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5558CB8F-9B39-47E6-80ED-714DA094627E}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\universitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F22C84E9-CAB6-4F9A-BF39-BC8DC5D16CF4}|Service\\Service.csproj|c:\\working\\sampleauth\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F22C84E9-CAB6-4F9A-BF39-BC8DC5D16CF4}|Service\\Service.csproj|solutionrelative:service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F22C84E9-CAB6-4F9A-BF39-BC8DC5D16CF4}|Service\\Service.csproj|c:\\working\\sampleauth\\service\\customauthstateprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F22C84E9-CAB6-4F9A-BF39-BC8DC5D16CF4}|Service\\Service.csproj|solutionrelative:service\\customauthstateprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5558CB8F-9B39-47E6-80ED-714DA094627E}|Domain\\Domain.csproj|c:\\working\\sampleauth\\domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5558CB8F-9B39-47E6-80ED-714DA094627E}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5558CB8F-9B39-47E6-80ED-714DA094627E}|Domain\\Domain.csproj|c:\\working\\sampleauth\\domain\\entities\\locationoffice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5558CB8F-9B39-47E6-80ED-714DA094627E}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\locationoffice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5558CB8F-9B39-47E6-80ED-714DA094627E}|Domain\\Domain.csproj|c:\\working\\sampleauth\\domain\\interfaces\\idegreerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5558CB8F-9B39-47E6-80ED-714DA094627E}|Domain\\Domain.csproj|solutionrelative:domain\\interfaces\\idegreerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5558CB8F-9B39-47E6-80ED-714DA094627E}|Domain\\Domain.csproj|c:\\working\\sampleauth\\domain\\interfaces\\ieducationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5558CB8F-9B39-47E6-80ED-714DA094627E}|Domain\\Domain.csproj|solutionrelative:domain\\interfaces\\ieducationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85A887F1-E403-4124-88D6-D0D2855E5B77}|DataAccess\\DataAccess.csproj|c:\\working\\sampleauth\\dataaccess\\educationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85A887F1-E403-4124-88D6-D0D2855E5B77}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\educationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85A887F1-E403-4124-88D6-D0D2855E5B77}|DataAccess\\DataAccess.csproj|c:\\working\\sampleauth\\dataaccess\\locationofficerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85A887F1-E403-4124-88D6-D0D2855E5B77}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\locationofficerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85A887F1-E403-4124-88D6-D0D2855E5B77}|DataAccess\\DataAccess.csproj|c:\\working\\sampleauth\\dataaccess\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85A887F1-E403-4124-88D6-D0D2855E5B77}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5558CB8F-9B39-47E6-80ED-714DA094627E}|Domain\\Domain.csproj|c:\\working\\sampleauth\\domain\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5558CB8F-9B39-47E6-80ED-714DA094627E}|Domain\\Domain.csproj|solutionrelative:domain\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85A887F1-E403-4124-88D6-D0D2855E5B77}|DataAccess\\DataAccess.csproj|c:\\working\\sampleauth\\dataaccess\\universityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85A887F1-E403-4124-88D6-D0D2855E5B77}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\universityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFC1EA81-547D-43A6-A42E-8C54CD23D350}|View\\View.csproj|c:\\working\\sampleauth\\view\\components\\pages\\educationpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DFC1EA81-547D-43A6-A42E-8C54CD23D350}|View\\View.csproj|solutionrelative:view\\components\\pages\\educationpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F78718DD-D411-4098-88F6-FBEBF60FA531}|API\\API.csproj|c:\\working\\sampleauth\\api\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F78718DD-D411-4098-88F6-FBEBF60FA531}|API\\API.csproj|solutionrelative:api\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFC1EA81-547D-43A6-A42E-8C54CD23D350}|View\\View.csproj|c:\\working\\sampleauth\\view\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DFC1EA81-547D-43A6-A42E-8C54CD23D350}|View\\View.csproj|solutionrelative:view\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5558CB8F-9B39-47E6-80ED-714DA094627E}|Domain\\Domain.csproj|c:\\working\\sampleauth\\domain\\entities\\degree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5558CB8F-9B39-47E6-80ED-714DA094627E}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\degree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F78718DD-D411-4098-88F6-FBEBF60FA531}|API\\API.csproj|c:\\working\\sampleauth\\api\\controllers\\universitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F78718DD-D411-4098-88F6-FBEBF60FA531}|API\\API.csproj|solutionrelative:api\\controllers\\universitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85A887F1-E403-4124-88D6-D0D2855E5B77}|DataAccess\\DataAccess.csproj|c:\\working\\sampleauth\\dataaccess\\adminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85A887F1-E403-4124-88D6-D0D2855E5B77}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\adminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFC1EA81-547D-43A6-A42E-8C54CD23D350}|View\\View.csproj|c:\\working\\sampleauth\\view\\components\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DFC1EA81-547D-43A6-A42E-8C54CD23D350}|View\\View.csproj|solutionrelative:view\\components\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFC1EA81-547D-43A6-A42E-8C54CD23D350}|View\\View.csproj|c:\\working\\sampleauth\\view\\components\\admin\\candidatemanagement.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DFC1EA81-547D-43A6-A42E-8C54CD23D350}|View\\View.csproj|solutionrelative:view\\components\\admin\\candidatemanagement.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFC1EA81-547D-43A6-A42E-8C54CD23D350}|View\\View.csproj|c:\\working\\sampleauth\\view\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFC1EA81-547D-43A6-A42E-8C54CD23D350}|View\\View.csproj|solutionrelative:view\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFC1EA81-547D-43A6-A42E-8C54CD23D350}|View\\View.csproj|c:\\working\\sampleauth\\view\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{DFC1EA81-547D-43A6-A42E-8C54CD23D350}|View\\View.csproj|solutionrelative:view\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFC1EA81-547D-43A6-A42E-8C54CD23D350}|View\\View.csproj|c:\\working\\sampleauth\\view\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DFC1EA81-547D-43A6-A42E-8C54CD23D350}|View\\View.csproj|solutionrelative:view\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFC1EA81-547D-43A6-A42E-8C54CD23D350}|View\\View.csproj|c:\\working\\sampleauth\\view\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DFC1EA81-547D-43A6-A42E-8C54CD23D350}|View\\View.csproj|solutionrelative:view\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F22C84E9-CAB6-4F9A-BF39-BC8DC5D16CF4}|Service\\Service.csproj|c:\\working\\sampleauth\\service\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F22C84E9-CAB6-4F9A-BF39-BC8DC5D16CF4}|Service\\Service.csproj|solutionrelative:service\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F22C84E9-CAB6-4F9A-BF39-BC8DC5D16CF4}|Service\\Service.csproj|c:\\working\\sampleauth\\service\\cityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F22C84E9-CAB6-4F9A-BF39-BC8DC5D16CF4}|Service\\Service.csproj|solutionrelative:service\\cityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F22C84E9-CAB6-4F9A-BF39-BC8DC5D16CF4}|Service\\Service.csproj|c:\\working\\sampleauth\\service\\cookieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F22C84E9-CAB6-4F9A-BF39-BC8DC5D16CF4}|Service\\Service.csproj|solutionrelative:service\\cookieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F22C84E9-CAB6-4F9A-BF39-BC8DC5D16CF4}|Service\\Service.csproj|c:\\working\\sampleauth\\service\\locationofficeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F22C84E9-CAB6-4F9A-BF39-BC8DC5D16CF4}|Service\\Service.csproj|solutionrelative:service\\locationofficeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F22C84E9-CAB6-4F9A-BF39-BC8DC5D16CF4}|Service\\Service.csproj|c:\\working\\sampleauth\\service\\majorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F22C84E9-CAB6-4F9A-BF39-BC8DC5D16CF4}|Service\\Service.csproj|solutionrelative:service\\majorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F22C84E9-CAB6-4F9A-BF39-BC8DC5D16CF4}|Service\\Service.csproj|c:\\working\\sampleauth\\service\\universityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F22C84E9-CAB6-4F9A-BF39-BC8DC5D16CF4}|Service\\Service.csproj|solutionrelative:service\\universityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F22C84E9-CAB6-4F9A-BF39-BC8DC5D16CF4}|Service\\Service.csproj|c:\\working\\sampleauth\\service\\sessionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F22C84E9-CAB6-4F9A-BF39-BC8DC5D16CF4}|Service\\Service.csproj|solutionrelative:service\\sessionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F22C84E9-CAB6-4F9A-BF39-BC8DC5D16CF4}|Service\\Service.csproj|c:\\working\\sampleauth\\service\\preferenceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F22C84E9-CAB6-4F9A-BF39-BC8DC5D16CF4}|Service\\Service.csproj|solutionrelative:service\\preferenceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F78718DD-D411-4098-88F6-FBEBF60FA531}|API\\API.csproj|c:\\working\\sampleauth\\api\\controllers\\majorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F78718DD-D411-4098-88F6-FBEBF60FA531}|API\\API.csproj|solutionrelative:api\\controllers\\majorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F78718DD-D411-4098-88F6-FBEBF60FA531}|API\\API.csproj|c:\\working\\sampleauth\\api\\controllers\\degreecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F78718DD-D411-4098-88F6-FBEBF60FA531}|API\\API.csproj|solutionrelative:api\\controllers\\degreecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F78718DD-D411-4098-88F6-FBEBF60FA531}|API\\API.csproj|c:\\working\\sampleauth\\api\\controllers\\citycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F78718DD-D411-4098-88F6-FBEBF60FA531}|API\\API.csproj|solutionrelative:api\\controllers\\citycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5558CB8F-9B39-47E6-80ED-714DA094627E}|Domain\\Domain.csproj|c:\\working\\sampleauth\\domain\\dto\\majordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5558CB8F-9B39-47E6-80ED-714DA094627E}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\majordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5558CB8F-9B39-47E6-80ED-714DA094627E}|Domain\\Domain.csproj|c:\\working\\sampleauth\\domain\\dto\\degreedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5558CB8F-9B39-47E6-80ED-714DA094627E}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\degreedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5558CB8F-9B39-47E6-80ED-714DA094627E}|Domain\\Domain.csproj|c:\\working\\sampleauth\\domain\\dto\\locationofficedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5558CB8F-9B39-47E6-80ED-714DA094627E}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\locationofficedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5558CB8F-9B39-47E6-80ED-714DA094627E}|Domain\\Domain.csproj|c:\\working\\sampleauth\\domain\\dto\\citydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5558CB8F-9B39-47E6-80ED-714DA094627E}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\citydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85A887F1-E403-4124-88D6-D0D2855E5B77}|DataAccess\\DataAccess.csproj|c:\\working\\sampleauth\\dataaccess\\sqlconnectionfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85A887F1-E403-4124-88D6-D0D2855E5B77}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\sqlconnectionfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85A887F1-E403-4124-88D6-D0D2855E5B77}|DataAccess\\DataAccess.csproj|c:\\working\\sampleauth\\dataaccess\\cityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85A887F1-E403-4124-88D6-D0D2855E5B77}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\cityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85A887F1-E403-4124-88D6-D0D2855E5B77}|DataAccess\\DataAccess.csproj|c:\\working\\sampleauth\\dataaccess\\degreerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85A887F1-E403-4124-88D6-D0D2855E5B77}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\degreerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85A887F1-E403-4124-88D6-D0D2855E5B77}|DataAccess\\DataAccess.csproj|c:\\working\\sampleauth\\dataaccess\\majorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85A887F1-E403-4124-88D6-D0D2855E5B77}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\majorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85A887F1-E403-4124-88D6-D0D2855E5B77}|DataAccess\\DataAccess.csproj|c:\\working\\sampleauth\\dataaccess\\preferencerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85A887F1-E403-4124-88D6-D0D2855E5B77}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\preferencerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFC1EA81-547D-43A6-A42E-8C54CD23D350}|View\\View.csproj|c:\\working\\sampleauth\\view\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DFC1EA81-547D-43A6-A42E-8C54CD23D350}|View\\View.csproj|solutionrelative:view\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFC1EA81-547D-43A6-A42E-8C54CD23D350}|View\\View.csproj|c:\\working\\sampleauth\\view\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DFC1EA81-547D-43A6-A42E-8C54CD23D350}|View\\View.csproj|solutionrelative:view\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFC1EA81-547D-43A6-A42E-8C54CD23D350}|View\\View.csproj|c:\\working\\sampleauth\\view\\wwwroot\\cookiefunctions.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{DFC1EA81-547D-43A6-A42E-8C54CD23D350}|View\\View.csproj|solutionrelative:view\\wwwroot\\cookiefunctions.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFC1EA81-547D-43A6-A42E-8C54CD23D350}|View\\View.csproj|c:\\working\\sampleauth\\view\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DFC1EA81-547D-43A6-A42E-8C54CD23D350}|View\\View.csproj|solutionrelative:view\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFC1EA81-547D-43A6-A42E-8C54CD23D350}|View\\View.csproj|c:\\working\\sampleauth\\view\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DFC1EA81-547D-43A6-A42E-8C54CD23D350}|View\\View.csproj|solutionrelative:view\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFC1EA81-547D-43A6-A42E-8C54CD23D350}|View\\View.csproj|c:\\working\\sampleauth\\view\\components\\layout\\mainlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{DFC1EA81-547D-43A6-A42E-8C54CD23D350}|View\\View.csproj|solutionrelative:view\\components\\layout\\mainlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F78718DD-D411-4098-88F6-FBEBF60FA531}|API\\API.csproj|c:\\working\\sampleauth\\api\\controllers\\preferencecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F78718DD-D411-4098-88F6-FBEBF60FA531}|API\\API.csproj|solutionrelative:api\\controllers\\preferencecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "EducationPage.razor",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\View\\Components\\Pages\\EducationPage.razor",
+              "RelativeDocumentMoniker": "View\\Components\\Pages\\EducationPage.razor",
+              "ToolTip": "C:\\Working\\SampleAuth\\View\\Components\\Pages\\EducationPage.razor*",
+              "RelativeToolTip": "View\\Components\\Pages\\EducationPage.razor*",
+              "ViewState": "AgIAAOAAAAAAAAAAAAAAAPwAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-26T03:02:19.844Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EducationService.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\Service\\EducationService.cs",
+              "RelativeDocumentMoniker": "Service\\EducationService.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\Service\\EducationService.cs",
+              "RelativeToolTip": "Service\\EducationService.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAYwB8AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T02:13:09.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LocationOfficeController.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\API\\Controllers\\LocationOfficeController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\LocationOfficeController.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\API\\Controllers\\LocationOfficeController.cs",
+              "RelativeToolTip": "API\\Controllers\\LocationOfficeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T02:47:03.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EducationController.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\API\\Controllers\\EducationController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\EducationController.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\API\\Controllers\\EducationController.cs",
+              "RelativeToolTip": "API\\Controllers\\EducationController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T02:09:23.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\API\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\API\\Controllers\\UserController.cs",
+              "RelativeToolTip": "API\\Controllers\\UserController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACsAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T10:22:00.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DegreeService.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\Service\\DegreeService.cs",
+              "RelativeDocumentMoniker": "Service\\DegreeService.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\Service\\DegreeService.cs",
+              "RelativeToolTip": "Service\\DegreeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T02:11:17.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EducationDTO.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\Domain\\DTO\\EducationDTO.cs",
+              "RelativeDocumentMoniker": "Domain\\DTO\\EducationDTO.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\Domain\\DTO\\EducationDTO.cs",
+              "RelativeToolTip": "Domain\\DTO\\EducationDTO.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAcwA8AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T02:38:36.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RegisterDTO.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\Domain\\DTO\\RegisterDTO.cs",
+              "RelativeDocumentMoniker": "Domain\\DTO\\RegisterDTO.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\Domain\\DTO\\RegisterDTO.cs*",
+              "RelativeToolTip": "Domain\\DTO\\RegisterDTO.cs*",
+              "ViewState": "AgIAADAAAAAAAAAAAAAowD8AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T02:38:47.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Education.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\Domain\\Entities\\Education.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Education.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\Domain\\Entities\\Education.cs",
+              "RelativeToolTip": "Domain\\Entities\\Education.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwD8AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T03:15:28.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CustomAuthStateProvider.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\Service\\CustomAuthStateProvider.cs",
+              "RelativeDocumentMoniker": "Service\\CustomAuthStateProvider.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\Service\\CustomAuthStateProvider.cs",
+              "RelativeToolTip": "Service\\CustomAuthStateProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAYwC0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T10:21:41.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\User.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\Domain\\Entities\\User.cs",
+              "RelativeToolTip": "Domain\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T01:57:53.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UniversityDTO.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\Domain\\DTO\\UniversityDTO.cs",
+              "RelativeDocumentMoniker": "Domain\\DTO\\UniversityDTO.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\Domain\\DTO\\UniversityDTO.cs",
+              "RelativeToolTip": "Domain\\DTO\\UniversityDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T02:18:17.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\Service\\UserService.cs",
+              "RelativeDocumentMoniker": "Service\\UserService.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\Service\\UserService.cs",
+              "RelativeToolTip": "Service\\UserService.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA7wCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T03:20:02.542Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LocationOffice.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\Domain\\Entities\\LocationOffice.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\LocationOffice.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\Domain\\Entities\\LocationOffice.cs",
+              "RelativeToolTip": "Domain\\Entities\\LocationOffice.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T02:00:13.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IDegreeRepository.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\Domain\\Interfaces\\IDegreeRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Interfaces\\IDegreeRepository.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\Domain\\Interfaces\\IDegreeRepository.cs",
+              "RelativeToolTip": "Domain\\Interfaces\\IDegreeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-27T02:32:54.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IEducationRepository.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\Domain\\Interfaces\\IEducationRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Interfaces\\IEducationRepository.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\Domain\\Interfaces\\IEducationRepository.cs*",
+              "RelativeToolTip": "Domain\\Interfaces\\IEducationRepository.cs*",
+              "ViewState": "AgIAAAEAAAAAAAAAAADwvw0AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T02:13:47.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EducationRepository.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\DataAccess\\EducationRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\EducationRepository.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\DataAccess\\EducationRepository.cs",
+              "RelativeToolTip": "DataAccess\\EducationRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T02:10:10.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "LocationOfficeRepository.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\DataAccess\\LocationOfficeRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\LocationOfficeRepository.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\DataAccess\\LocationOfficeRepository.cs",
+              "RelativeToolTip": "DataAccess\\LocationOfficeRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T10:22:31.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\DataAccess\\UserRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\UserRepository.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\DataAccess\\UserRepository.cs",
+              "RelativeToolTip": "DataAccess\\UserRepository.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowB8AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T08:12:03.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\Domain\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Interfaces\\IUserRepository.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\Domain\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "Domain\\Interfaces\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T02:13:36.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UniversityRepository.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\DataAccess\\UniversityRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\UniversityRepository.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\DataAccess\\UniversityRepository.cs",
+              "RelativeToolTip": "DataAccess\\UniversityRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T02:15:48.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\API\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\API\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "API\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAApwDwAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T02:46:47.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Login.razor",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\View\\Components\\Pages\\Login.razor",
+              "RelativeDocumentMoniker": "View\\Components\\Pages\\Login.razor",
+              "ToolTip": "C:\\Working\\SampleAuth\\View\\Components\\Pages\\Login.razor",
+              "RelativeToolTip": "View\\Components\\Pages\\Login.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-19T10:19:00.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Degree.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\Domain\\Entities\\Degree.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Degree.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\Domain\\Entities\\Degree.cs",
+              "RelativeToolTip": "Domain\\Entities\\Degree.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T02:16:52.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "UniversityController.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\API\\Controllers\\UniversityController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\UniversityController.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\API\\Controllers\\UniversityController.cs",
+              "RelativeToolTip": "API\\Controllers\\UniversityController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T02:31:45.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "AdminRepository.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\DataAccess\\AdminRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\AdminRepository.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\DataAccess\\AdminRepository.cs",
+              "RelativeToolTip": "DataAccess\\AdminRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T08:13:22.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Register.razor",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\View\\Components\\Pages\\Register.razor",
+              "RelativeDocumentMoniker": "View\\Components\\Pages\\Register.razor",
+              "ToolTip": "C:\\Working\\SampleAuth\\View\\Components\\Pages\\Register.razor",
+              "RelativeToolTip": "View\\Components\\Pages\\Register.razor",
+              "ViewState": "AgIAAPwAAAAAAAAAAAAAAAUBAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-19T10:19:15.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\View\\Program.cs",
+              "RelativeDocumentMoniker": "View\\Program.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\View\\Program.cs",
+              "RelativeToolTip": "View\\Program.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T10:20:55.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "CandidateManagement.razor",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\View\\Components\\Admin\\CandidateManagement.razor",
+              "RelativeDocumentMoniker": "View\\Components\\Admin\\CandidateManagement.razor",
+              "ToolTip": "C:\\Working\\SampleAuth\\View\\Components\\Admin\\CandidateManagement.razor",
+              "RelativeToolTip": "View\\Components\\Admin\\CandidateManagement.razor",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAAALMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-19T10:19:31.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "app.css",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\View\\wwwroot\\app.css",
+              "RelativeDocumentMoniker": "View\\wwwroot\\app.css",
+              "ToolTip": "C:\\Working\\SampleAuth\\View\\wwwroot\\app.css",
+              "RelativeToolTip": "View\\wwwroot\\app.css",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-26T03:11:52.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\View\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "View\\Components\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Working\\SampleAuth\\View\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "View\\Components\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-19T10:19:22.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\View\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "View\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Working\\SampleAuth\\View\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "View\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-19T10:19:32.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "AdminService.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\Service\\AdminService.cs",
+              "RelativeDocumentMoniker": "Service\\AdminService.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\Service\\AdminService.cs",
+              "RelativeToolTip": "Service\\AdminService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T03:27:38.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "CookieService.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\Service\\CookieService.cs",
+              "RelativeDocumentMoniker": "Service\\CookieService.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\Service\\CookieService.cs",
+              "RelativeToolTip": "Service\\CookieService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T10:21:39.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "CityService.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\Service\\CityService.cs",
+              "RelativeDocumentMoniker": "Service\\CityService.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\Service\\CityService.cs",
+              "RelativeToolTip": "Service\\CityService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T10:21:36.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "LocationOfficeService.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\Service\\LocationOfficeService.cs",
+              "RelativeDocumentMoniker": "Service\\LocationOfficeService.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\Service\\LocationOfficeService.cs",
+              "RelativeToolTip": "Service\\LocationOfficeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T03:19:27.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "MajorService.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\Service\\MajorService.cs",
+              "RelativeDocumentMoniker": "Service\\MajorService.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\Service\\MajorService.cs",
+              "RelativeToolTip": "Service\\MajorService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T02:11:00.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "UniversityService.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\Service\\UniversityService.cs",
+              "RelativeDocumentMoniker": "Service\\UniversityService.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\Service\\UniversityService.cs",
+              "RelativeToolTip": "Service\\UniversityService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T02:11:31.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "SessionService.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\Service\\SessionService.cs",
+              "RelativeDocumentMoniker": "Service\\SessionService.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\Service\\SessionService.cs",
+              "RelativeToolTip": "Service\\SessionService.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAmwCEAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T10:21:47.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "PreferenceService.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\Service\\PreferenceService.cs",
+              "RelativeDocumentMoniker": "Service\\PreferenceService.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\Service\\PreferenceService.cs",
+              "RelativeToolTip": "Service\\PreferenceService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T03:19:30.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "MajorController.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\API\\Controllers\\MajorController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\MajorController.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\API\\Controllers\\MajorController.cs",
+              "RelativeToolTip": "API\\Controllers\\MajorController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T02:30:31.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "DegreeController.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\API\\Controllers\\DegreeController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\DegreeController.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\API\\Controllers\\DegreeController.cs",
+              "RelativeToolTip": "API\\Controllers\\DegreeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T02:28:34.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "CityController.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\API\\Controllers\\CityController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\CityController.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\API\\Controllers\\CityController.cs",
+              "RelativeToolTip": "API\\Controllers\\CityController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T02:47:01.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "MajorDTO.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\Domain\\DTO\\MajorDTO.cs",
+              "RelativeDocumentMoniker": "Domain\\DTO\\MajorDTO.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\Domain\\DTO\\MajorDTO.cs",
+              "RelativeToolTip": "Domain\\DTO\\MajorDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T02:17:24.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "DegreeDTO.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\Domain\\DTO\\DegreeDTO.cs",
+              "RelativeDocumentMoniker": "Domain\\DTO\\DegreeDTO.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\Domain\\DTO\\DegreeDTO.cs",
+              "RelativeToolTip": "Domain\\DTO\\DegreeDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T02:16:09.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "LocationOfficeDTO.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\Domain\\DTO\\LocationOfficeDTO.cs",
+              "RelativeDocumentMoniker": "Domain\\DTO\\LocationOfficeDTO.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\Domain\\DTO\\LocationOfficeDTO.cs",
+              "RelativeToolTip": "Domain\\DTO\\LocationOfficeDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T02:17:04.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "CityDTO.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\Domain\\DTO\\CityDTO.cs",
+              "RelativeDocumentMoniker": "Domain\\DTO\\CityDTO.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\Domain\\DTO\\CityDTO.cs",
+              "RelativeToolTip": "Domain\\DTO\\CityDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T02:16:57.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "SqlConnectionFactory.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\DataAccess\\SqlConnectionFactory.cs",
+              "RelativeDocumentMoniker": "DataAccess\\SqlConnectionFactory.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\DataAccess\\SqlConnectionFactory.cs",
+              "RelativeToolTip": "DataAccess\\SqlConnectionFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T02:15:47.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "DegreeRepository.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\DataAccess\\DegreeRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\DegreeRepository.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\DataAccess\\DegreeRepository.cs",
+              "RelativeToolTip": "DataAccess\\DegreeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T02:15:39.326Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "MajorRepository.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\DataAccess\\MajorRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\MajorRepository.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\DataAccess\\MajorRepository.cs",
+              "RelativeToolTip": "DataAccess\\MajorRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T02:15:33.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "CityRepository.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\DataAccess\\CityRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\CityRepository.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\DataAccess\\CityRepository.cs",
+              "RelativeToolTip": "DataAccess\\CityRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T10:22:24.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "PreferenceRepository.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\DataAccess\\PreferenceRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\PreferenceRepository.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\DataAccess\\PreferenceRepository.cs",
+              "RelativeToolTip": "DataAccess\\PreferenceRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T08:14:07.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\View\\Components\\_Imports.razor",
+              "RelativeDocumentMoniker": "View\\Components\\_Imports.razor",
+              "ToolTip": "C:\\Working\\SampleAuth\\View\\Components\\_Imports.razor",
+              "RelativeToolTip": "View\\Components\\_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-21T09:55:50.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "cookieFunctions.js",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\View\\wwwroot\\cookieFunctions.js",
+              "RelativeDocumentMoniker": "View\\wwwroot\\cookieFunctions.js",
+              "ToolTip": "C:\\Working\\SampleAuth\\View\\wwwroot\\cookieFunctions.js",
+              "RelativeToolTip": "View\\wwwroot\\cookieFunctions.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-08-21T09:40:11.405Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\View\\Components\\App.razor",
+              "RelativeDocumentMoniker": "View\\Components\\App.razor",
+              "ToolTip": "C:\\Working\\SampleAuth\\View\\Components\\App.razor",
+              "RelativeToolTip": "View\\Components\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-19T10:20:52.987Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "Routes.razor",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\View\\Components\\Routes.razor",
+              "RelativeDocumentMoniker": "View\\Components\\Routes.razor",
+              "ToolTip": "C:\\Working\\SampleAuth\\View\\Components\\Routes.razor",
+              "RelativeToolTip": "View\\Components\\Routes.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-21T02:57:45.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\View\\appsettings.json",
+              "RelativeDocumentMoniker": "View\\appsettings.json",
+              "ToolTip": "C:\\Working\\SampleAuth\\View\\appsettings.json",
+              "RelativeToolTip": "View\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-21T09:44:30.919Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "MainLayout.razor.css",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\View\\Components\\Layout\\MainLayout.razor.css",
+              "RelativeDocumentMoniker": "View\\Components\\Layout\\MainLayout.razor.css",
+              "ToolTip": "C:\\Working\\SampleAuth\\View\\Components\\Layout\\MainLayout.razor.css",
+              "RelativeToolTip": "View\\Components\\Layout\\MainLayout.razor.css",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-21T04:19:05.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "PreferenceController.cs",
+              "DocumentMoniker": "C:\\Working\\SampleAuth\\API\\Controllers\\PreferenceController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\PreferenceController.cs",
+              "ToolTip": "C:\\Working\\SampleAuth\\API\\Controllers\\PreferenceController.cs",
+              "RelativeToolTip": "API\\Controllers\\PreferenceController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T02:47:04.352Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+C:\Working\SampleAuth\DataAccess\bin\Debug\net8.0\DataAccess.deps.json
+C:\Working\SampleAuth\DataAccess\bin\Debug\net8.0\DataAccess.runtimeconfig.json
+C:\Working\SampleAuth\DataAccess\bin\Debug\net8.0\DataAccess.dll
+C:\Working\SampleAuth\DataAccess\bin\Debug\net8.0\DataAccess.pdb
+C:\Working\SampleAuth\DataAccess\bin\Debug\net8.0\Domain.dll
+C:\Working\SampleAuth\DataAccess\bin\Debug\net8.0\Domain.pdb
+C:\Working\SampleAuth\DataAccess\obj\Debug\net8.0\DataAccess.csproj.AssemblyReference.cache
+C:\Working\SampleAuth\DataAccess\obj\Debug\net8.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Working\SampleAuth\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfoInputs.cache
+C:\Working\SampleAuth\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfo.cs
+C:\Working\SampleAuth\DataAccess\obj\Debug\net8.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Working\SampleAuth\DataAccess\obj\Debug\net8.0\DataAccess.csproj.Up2Date
+C:\Working\SampleAuth\DataAccess\obj\Debug\net8.0\DataAccess.dll
+C:\Working\SampleAuth\DataAccess\obj\Debug\net8.0\refint\DataAccess.dll
+C:\Working\SampleAuth\DataAccess\obj\Debug\net8.0\DataAccess.pdb
+C:\Working\SampleAuth\DataAccess\obj\Debug\net8.0\DataAccess.genruntimeconfig.cache
+C:\Working\SampleAuth\DataAccess\obj\Debug\net8.0\ref\DataAccess.dll

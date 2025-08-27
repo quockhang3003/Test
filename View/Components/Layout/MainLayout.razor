@@ -1,0 +1,100 @@
+﻿@using Microsoft.AspNetCore.Components.Authorization
+@using Service
+@inherits LayoutComponentBase
+@inject AuthenticationStateProvider AuthStateProvider
+@inject IHttpClientFactory ClientFactory
+@inject SessionService SessionService
+@inject NavigationManager Navigation
+
+<div class="page">
+    <div class="sidebar-custom col-sm-2 bg-light">
+        <NavMenu />
+    </div>
+    <main class="mt-3">
+        <div class="clearfix">
+            <div class="px-4">
+                <span class="float-end">
+                    <AuthorizeView Roles="Admin">
+                        <Authorized Context="context">
+                            <span>Welcome, Admin: <strong>@context.User.Identity?.Name</strong></span>
+                            <span> | </span>
+                            <button class="btn btn-link p-0 fw-bold" @onclick="LogoutAdmin">Logout</button>
+                        </Authorized>
+                    </AuthorizeView>
+
+                    <AuthorizeView Roles="User">
+                        <Authorized Context="context">
+                            <span>Welcome, <strong>@context.User.Identity?.Name</strong></span>
+                            <span> | Submit on: @DateTime.Now.ToString("dd MMM yyyy HH:mm:ss")</span>
+                            <span> | </span>
+                            <button class="btn btn-link p-0 fw-bold" @onclick="LogoutUser">Logout</button>
+                        </Authorized>
+                    </AuthorizeView>
+
+                    <AuthorizeView>
+                        <NotAuthorized>
+                            <span>Not logged in | <a href="/login" class="fw-bold">Login</a></span>
+                        </NotAuthorized>
+                    </AuthorizeView>
+                </span>
+            </div>
+        </div>
+        <article class="content px-4 fs-custom">
+            @Body
+        </article>
+    </main>
+</div>
+
+@code {
+    [CascadingParameter]
+    private Task<AuthenticationState> AuthStateTask { get; set; }
+
+    [Inject] private AuthenticationStateProvider AuthProvider { get; set; }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender && AuthProvider is CustomAuthStateProvider custom)
+        {
+            await custom.RefreshStateAsync();
+        }
+    }
+    private HttpClient Http => ClientFactory.CreateClient("LocalAPI");
+
+    private async Task LogoutUser()
+    {
+        try
+        {
+            await Http.PostAsJsonAsync("api/User/logout", new { });
+        }
+        catch (Exception ex)
+        {
+            throw new Exception(ex.Message);
+        }
+
+        await SessionService.LogoutUserAsync();
+
+        if (AuthStateProvider is CustomAuthStateProvider custom)
+            await custom.NotifyLogoutAsync("User");
+
+        Navigation.NavigateTo("/login", forceLoad: true);
+    }
+
+    private async Task LogoutAdmin()
+    {
+        try
+        {
+            await Http.PostAsJsonAsync("api/Admin/logout", new { });
+        }
+        catch (Exception ex)
+        {
+            throw new Exception(ex.Message);
+        }
+
+        await SessionService.LogoutAdminAsync();
+
+        if (AuthStateProvider is CustomAuthStateProvider custom)
+            await custom.NotifyLogoutAsync("Admin");
+
+        Navigation.NavigateTo("/login", forceLoad: true);
+    }
+}

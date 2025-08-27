@@ -1,0 +1,59 @@
+﻿@using Domain.DTO
+@using Microsoft.AspNetCore.Components.Authorization
+@inject NavigationManager Navigation
+@inject AuthenticationStateProvider AuthProvider
+
+<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler')?.click()">
+    <nav class="flex-column">
+        <AuthorizeView>
+            <Authorized>
+                <div class="rounded shadow-sm pb-1 mb-2 border">
+                    <h6 class="fw-bold custom-header ps-4">Application</h6>
+                    <div>
+                        <NavLink class="nav-link" href="register">
+                            <span aria-hidden="true"></span> Create Application
+                        </NavLink>
+                        <NavLink class="nav-link" href="login">
+                            <span aria-hidden="true"></span> My Application
+                        </NavLink>
+                    </div>
+                </div>
+            </Authorized>
+            <NotAuthorized>
+                <div class="rounded shadow-sm pb-1 mb-2 border">
+                    <h6 class="fw-bold custom-header ps-4">Welcome</h6>
+                    <div>
+                        <NavLink class="nav-link" href="login">
+                            <span aria-hidden="true"></span> Login
+                        </NavLink>
+                    </div>
+                </div>
+            </NotAuthorized>
+        </AuthorizeView>
+
+        <AuthorizeView Roles="Admin">
+            <Authorized>
+                <div class="rounded shadow-sm pb-1 border">
+                    <h6 class="fw-bold custom-header ps-4">Admin</h6>
+                    <div>
+                        <NavLink class="nav-link" href="admin/candidates">
+                            <span aria-hidden="true"></span> Candidate Management
+                        </NavLink>
+                    </div>
+                </div>
+            </Authorized>
+        </AuthorizeView>
+    </nav>
+</div>
+@code {
+    private bool IsAdmin { get; set; }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        var authState = await AuthProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        IsAdmin = user.Identity?.IsAuthenticated == true &&
+          user.IsInRole("Admin");
+    }
+}

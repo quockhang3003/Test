@@ -1,0 +1,95 @@
+﻿@page "/login"
+@page "/"
+@using Domain.DTO
+@using Microsoft.AspNetCore.Components.Authorization
+@using Service
+@inject IHttpClientFactory ClientFactory
+@inject NavigationManager Navigation
+@inject AuthenticationStateProvider AuthStateProvider
+@inject CookieService CookieService
+@rendermode InteractiveServer
+
+<EditForm Model="loginModel" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <section class="vh-100">
+        <div class="container-fluid h-custom">
+            <div class="row d-flex h-100">
+                <div class="col-md-8 col-lg-6 col-xl-6">
+                    <div class="mb-3">
+                        <h5 class="fw-bold mb-3 text-primary">Login here</h5>
+                        <div class="border p-3 bg-light">
+                            <div class="row mb-3 align-items-center ">
+                                <label class="col-sm-4 col-form-label text-end pe-2 fw-bold">Email</label>
+                                <div class="col-sm-7">
+                                    <InputText @bind-Value="loginModel.Email" class="form-control form-control-sm" />
+                                    <ValidationMessage For="@(() => loginModel.Email)" />
+                                </div>
+                            </div>
+                            <div class="row mb-3 align-items-center">
+                                <label class="col-sm-4 col-form-label text-end pe-2 fw-bold">Password</label>
+                                <div class="col-sm-7">
+                                    <InputText type="password" @bind-Value="loginModel.Password" class="form-control form-control-sm" />
+                                    <ValidationMessage For="@(() => loginModel.Password)" />
+                                </div>
+                            </div>
+                            <div class="text-center text-lg-start">
+                                <div class="row">
+                                    <div class="col-sm-4"></div>
+                                    <div class="d-flex gap-3 flex-wrap col-sm-7">
+                                        <button type="submit" class="btn px-3 fw-bold btn custom-header">
+                                            Login
+                                        </button>
+                                    </div>
+                                    @if (!string.IsNullOrEmpty(error))
+                                    {
+                                        <div class="alert alert-danger mt-2">@error</div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</EditForm>
+
+@code {
+    private LoginDTO loginModel = new();
+    private string error = "";
+    private HttpClient Http => ClientFactory.CreateClient("LocalAPI");
+
+    private async Task HandleValidSubmit()
+    {
+        error = "";
+        try
+        {
+            var rUser = await Http.PostAsJsonAsync("api/User/login", new { Email = loginModel.Email, Password = loginModel.Password });
+            if (rUser.IsSuccessStatusCode)
+            {
+                var authProvider = (CustomAuthStateProvider)AuthStateProvider;
+                await authProvider.NotifyLoginAsync(loginModel.Email, "User");
+                await CookieService.SaveUserEmailToCookie(loginModel.Email);
+                Navigation.NavigateTo("/register", forceLoad: true);
+                return; 
+            }
+
+            var rAdmin = await Http.PostAsJsonAsync("api/Admin/login", new { Email = loginModel.Email, Password = loginModel.Password });
+            if (rAdmin.IsSuccessStatusCode)
+            {
+                var authProvider = (CustomAuthStateProvider)AuthStateProvider;
+                await authProvider.NotifyLoginAsync(loginModel.Email, "Admin");
+
+                Navigation.NavigateTo("/admin/candidates", forceLoad: true);
+                return;
+            }
+
+            error = "Sai tài khoản hoặc mật khẩu.";
+        }
+        catch (Exception ex)
+        {
+            error = "Lỗi hệ thống: " + ex.Message;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+wwwroot\app.css
+wwwroot\bootstrap\bootstrap.min.css
+wwwroot\bootstrap\bootstrap.min.css.map
+wwwroot\cookieFunctions.js
+wwwroot\favicon.png
+wwwroot\images\draw2.webp
+wwwroot\lib\fontawesome-iconpicker\css\fontawesome-iconpicker.css
+wwwroot\lib\fontawesome-iconpicker\css\fontawesome-iconpicker.min.css
+wwwroot\lib\fontawesome-iconpicker\js\fontawesome-iconpicker.js
+wwwroot\lib\fontawesome-iconpicker\js\fontawesome-iconpicker.min.js

@@ -1,0 +1,211 @@
+﻿@page "/admin/candidates"
+@using Service
+@rendermode InteractiveServer
+@inject SessionService SessionService
+@inject NavigationManager Navigation
+
+@if (isLoading)
+{
+    <div class="text-center mt-5">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <p>Loading candidate data...</p>
+    </div>
+}
+else if (!isAuthorized)
+{
+    <div class="alert alert-danger">
+        <h4>Access Denied</h4>
+        <p>You don't have permission to access this page.</p>
+        <a href="/login" class="btn btn-primary">Go to Login</a>
+    </div>
+}
+else
+{
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="mb-4">Candidate Management</h2>
+
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">All Applications</h5>
+                        <div>
+                            <input type="search" class="form-control d-inline-block" style="width: 250px;"
+                                   placeholder="Search applications..." @bind="searchTerm" @oninput="FilterApplications">
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        @if (filteredApplications.Any())
+                        {
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Full Name</th>
+                                            <th>Email</th>
+                                            <th>Applied Date</th>
+                                            <th>Office Location</th>
+                                            <th>Status</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var app in filteredApplications)
+                                        {
+                                            <tr>
+                                                <td>@app.Id</td>
+                                                <td>@app.FullName</td>
+                                                <td>@app.Email</td>
+                                                <td>@app.CreatedAt.ToString("dd/MM/yyyy")</td>
+                                                <td>@app.OfficeLocation</td>
+                                                <td>
+                                                    <span class="badge bg-@GetStatusColor(app.Status)">@app.Status</span>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-outline-primary me-1" @onclick="() => ViewApplication(app.Id)">
+                                                        View
+                                                    </button>
+                                                    <button class="btn btn-sm btn-outline-success me-1" @onclick="() => ApproveApplication(app.Id)">
+                                                        Approve
+                                                    </button>
+                                                    <button class="btn btn-sm btn-outline-danger" @onclick="() => RejectApplication(app.Id)">
+                                                        Reject
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="text-center py-4">
+                                <p class="text-muted">No applications found.</p>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    private bool isLoading = true;
+    private bool isAuthorized = false;
+    private string searchTerm = "";
+    private List<ApplicationSummary> allApplications = new();
+    private List<ApplicationSummary> filteredApplications = new();
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await CheckAuthorization();
+            if (isAuthorized)
+            {
+                await LoadApplications();
+            }
+
+            isLoading = false;
+            StateHasChanged();
+        }
+    }
+
+    private async Task CheckAuthorization()
+    {
+        var sessionInfo = await SessionService.GetSessionInfoAsync();
+        isAuthorized = sessionInfo.IsAdmin;
+        if (!isAuthorized)
+        {
+            await Task.Delay(2000);
+            Navigation.NavigateTo("/login");
+        }
+    }
+    private async Task LoadApplications()
+    {
+        // TODO: Load real data from API
+        await Task.Delay(500);
+
+        // Demo data
+        allApplications = new List<ApplicationSummary>
+        {
+            new() { Id = 1, FullName = "Nguyen Van A", Email = "nguyenvana@email.com", CreatedAt = DateTime.Now.AddDays(-5), OfficeLocation = "HCM", Status = "Pending" },
+            new() { Id = 2, FullName = "Tran Thi B", Email = "tranthib@email.com", CreatedAt = DateTime.Now.AddDays(-3), OfficeLocation = "HN", Status = "Approved" },
+            new() { Id = 3, FullName = "Le Van C", Email = "levanc@email.com", CreatedAt = DateTime.Now.AddDays(-1), OfficeLocation = "HCM", Status = "Rejected" }
+        };
+
+        filteredApplications = allApplications.ToList();
+    }
+
+    private void FilterApplications()
+    {
+        if (string.IsNullOrWhiteSpace(searchTerm))
+        {
+            filteredApplications = allApplications.ToList();
+        }
+        else
+        {
+            filteredApplications = allApplications
+                .Where(a => a.FullName.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ||
+                            a.Email.Contains(searchTerm, StringComparison.OrdinalIgnoreCase))
+                .ToList();
+        }
+
+        StateHasChanged();
+    }
+
+    private string GetStatusColor(string status)
+    {
+        return status.ToLower() switch
+        {
+            "approved" => "success",
+            "rejected" => "danger",
+            "pending" => "warning",
+            _ => "secondary"
+        };
+    }
+
+    private async Task ViewApplication(int id)
+    {
+        // TODO: Navigate to application detail page
+        Navigation.NavigateTo($"/admin/candidates/{id}");
+    }
+
+    private async Task ApproveApplication(int id)
+    {
+        // TODO: Call API to approve application
+        var app = allApplications.FirstOrDefault(a => a.Id == id);
+        if (app != null)
+        {
+            app.Status = "Approved";
+            FilterApplications();
+        }
+    }
+
+    private async Task RejectApplication(int id)
+    {
+        // TODO: Call API to reject application
+        var app = allApplications.FirstOrDefault(a => a.Id == id);
+        if (app != null)
+        {
+            app.Status = "Rejected";
+            FilterApplications();
+        }
+    }
+
+    public class ApplicationSummary
+    {
+        public int Id { get; set; }
+        public string FullName { get; set; } = "";
+        public string Email { get; set; } = "";
+        public DateTime CreatedAt { get; set; }
+        public string OfficeLocation { get; set; } = "";
+        public string Status { get; set; } = "";
+    }
+
+}
